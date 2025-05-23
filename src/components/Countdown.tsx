@@ -27,16 +27,21 @@ export default function Countdown() {
     if (diffMs <= 0) {
       setRemaining("퇴근 완료 🎉");
     } else {
-      const diffMin = Math.floor(diffMs / 1000 / 60);
-      const hours = Math.floor(diffMin / 60);
-      const minutes = diffMin % 60;
-      setRemaining(`${hours}:${minutes}`);
+      const diffSec = Math.floor(diffMs / 1000);
+      const hours = Math.floor(diffSec / 3600);
+      const minutes = Math.floor((diffSec % 3600) / 60);
+      const seconds = diffSec % 60;
+      setRemaining(
+        `${hours}:${String(minutes).padStart(2, "0")}:${String(
+          seconds
+        ).padStart(2, "0")}`
+      );
     }
   };
 
   useEffect(() => {
     calculateRemainingTime(); // 초기 실행
-    const interval = setInterval(calculateRemainingTime, 1000 * 30); // 30초마다 업데이트
+    const interval = setInterval(calculateRemainingTime, 1000); // 1초마다 업데이트
     return () => clearInterval(interval);
   }, []);
 
