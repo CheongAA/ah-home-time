@@ -31,16 +31,6 @@ export default function BackgroundSelector() {
             {preset.label}
           </DropdownMenuItem>
         ))}
-        <DropdownMenuItem
-          onSelect={() => {
-            const path = prompt(
-              "커스텀 배경 이미지 경로를 입력하세요 (예: /bg/custom.jpg)"
-            );
-            if (path) setBg(path);
-          }}
-        >
-          내 이미지 넣기
-        </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
   );

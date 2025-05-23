@@ -8,8 +8,11 @@ export default function Countdown() {
   const [remaining, setRemaining] = useState<string | null>(null);
 
   const calculateRemainingTime = () => {
-    const saved = localStorage.getItem(STORAGE_KEY);
-    if (!saved) return;
+    let saved = localStorage.getItem(STORAGE_KEY);
+    if (!saved) {
+      saved = JSON.stringify({ start: "09:00", end: "18:00" });
+      localStorage.setItem(STORAGE_KEY, saved);
+    }
 
     const { end } = JSON.parse(saved) as { end: string };
     if (!end) return;

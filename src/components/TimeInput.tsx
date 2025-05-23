@@ -10,8 +10,8 @@ type WorkingHours = {
 };
 
 const defaultHours: WorkingHours = {
-  start: "",
-  end: "",
+  start: "09:00",
+  end: "18:00",
 };
 
 export default function TimeInput({

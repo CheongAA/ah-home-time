@@ -30,7 +30,7 @@ export default function Home() {
   return (
     <main
       className={
-        "relative flex min-h-screen flex-col items-center justify-center transition-colors bg-background text-foreground"
+        "relative flex min-h-screen flex-col items-center justify-center transition-colors bg-white dark:bg-black text-black dark:text-white"
       }
     >
       {!!bg && bg !== "none" && (
@@ -38,7 +38,7 @@ export default function Home() {
           <Image
             src={bg}
             alt="배경"
-            className="object-fill w-full h-full pointer-events-none"
+            className="object-fill w-full h-full "
             priority
             width={1920}
             height={1080}

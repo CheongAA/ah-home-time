@@ -17,6 +17,7 @@ export const BACKGROUND_PRESETS: { value: BackgroundType; label: string }[] = [
   { value: "/bg/vscode.png", label: "VSCode" },
   { value: "/bg/excel.png", label: "엑셀" },
   { value: "/bg/figma.png", label: "피그마" },
+  { value: "/bg/error.png", label: "에러" },
 ];
 
 export const useBackgroundStore = create<BackgroundState>((set) => {
