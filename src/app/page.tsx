@@ -40,6 +40,7 @@ export default function Home() {
             alt="배경"
             className="object-fill w-full h-full "
             priority
+            unoptimized
             width={1920}
             height={1080}
           />

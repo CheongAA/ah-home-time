@@ -14,10 +14,10 @@ interface BackgroundState {
 
 export const BACKGROUND_PRESETS: { value: BackgroundType; label: string }[] = [
   { value: "none", label: "배경 없음" },
-  { value: "/bg/vscode.png", label: "VSCode" },
-  { value: "/bg/excel.png", label: "엑셀" },
-  { value: "/bg/figma.png", label: "피그마" },
-  { value: "/bg/error.png", label: "에러" },
+  { value: "/ah-home-time/bg/vscode.png", label: "VSCode" },
+  { value: "/ah-home-time/bg/excel.png", label: "엑셀" },
+  { value: "/ah-home-time/bg/figma.png", label: "피그마" },
+  { value: "/ah-home-time/bg/error.png", label: "에러" },
 ];
 
 export const useBackgroundStore = create<BackgroundState>((set) => {
